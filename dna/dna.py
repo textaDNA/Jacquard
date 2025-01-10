@@ -1,4 +1,4 @@
-#!/usr/bin/python
+#!/usr/bin/python3
 
 import binascii
 import csv
@@ -30,10 +30,10 @@ class DNA(object):
 
         # Read the dictionary from data/huff3.dict
         # I made this file from the View_huff3.cd.new.correct
-        huff_dict = open(os.path.join(os.path.dirname(__file__), "data/huff3.dict"), "r")
-        csv_reader = csv.reader(huff_dict, delimiter=',')
-        for row in csv_reader:
-            self.code[row[0]] = row[1]
+        with open(os.path.join(os.path.dirname(__file__), "data/huff3.dict"), "r") as huff_dict:
+            csv_reader = csv.reader(huff_dict, delimiter=',')
+            for row in csv_reader:
+                self.code[row[0]] = row[1]
 
     def encode(self, input_file):
         """ Encode input_file in an DNA string """
@@ -41,15 +41,18 @@ class DNA(object):
         s1 = self.__S0_to_S1(input_file)
         s4 = self.__S1_to_S4(s1)
         s5 = self.__S4_to_S5(s4)
-        open(input_file + '.dna', 'w').write(s5)
+        with open(input_file + '.dna', 'w') as f:
+            f.write(s5)
 
     def decode(self, input_file):
         """ Decode file in an DNA string """
-        s5 = open(input_file, 'r').read()
+        with open(input_file, 'r') as f:
+            s5 = f.read()
         s4 = self.__S5_to_S4(s5)
         s0 = self.__S4_to_S0(s4)
         # Save s0 after conversion from hexadecimal to bytes
-        open(input_file[:-4]+'.decoded', 'wb').write(binascii.unhexlify(s0))
+        with open(input_file[:-4]+'.decoded', 'wb') as f:
+            f.write(binascii.unhexlify(s0))
 
     def decode_join(self, input_file):
         """ Decode and join DNA zip file into DNA string """
@@ -59,8 +62,9 @@ class DNA(object):
         s4 = self.__S5_to_S4(s5)
         s0 = self.__S4_to_S0(s4)
         # Save s0 after conversion from hexadecimal to bytes
-        open(input_file[:-13]+'.decoded', 'wb').write(binascii.unhexlify(s0))
-        
+        with open(input_file[:-13]+'.decoded', 'wb') as f:
+            f.write(binascii.unhexlify(s0))
+            
     def encode_split(self, input_file):
         """ Encode file in many overlapping DNA string. Returns a zip file """
 
@@ -92,7 +96,7 @@ class DNA(object):
         # Compute s2
         n = len(s1)
         s2 = self.__base10_to_base3(n)
-        s2 = '0' * (20 - len(s2)) + s2
+        s2 = '0' * (20 - len(s2))
         
         # Compute s3
         s3 = '0' * (-(n + len(s2) % 25) % 25)
@@ -121,7 +125,7 @@ class DNA(object):
     def __S5_to_Fi(self, s5):
         n = len(s5)
         F = []
-        for i in range(0, n/25 - 2):
+        for i in range(0, n//25 - 2):
             # Reverse if odd
             if i % 2 == 1:
                 F.append(self.__reverse_complement(s5[25*i:25*i+75]))
@@ -149,8 +153,8 @@ class DNA(object):
         for i in range(0, len(F)):
             i3 = self.__base10_to_base3(i)
             i3 = '0' * (12 - len(i3)) + i3
-            P = (int(ID[1-1]) + int(i3[1-1]) + int(i3[3-1]) +
-                 int(i3[5-1]) + int(i3[7-1]) + int(i3[9-1]) + int(i3[11-1])) % 3
+            P = (int(ID[0]) + int(i3[0]) + int(i3[2]) +
+                 int(i3[4]) + int(i3[6]) + int(i3[8]) + int(i3[10])) % 3
             IX = ID + i3 + str(P)
 
             ix = ''
@@ -194,7 +198,8 @@ class DNA(object):
         i = 0
         for f in Findex:
             fragment_file = "{0}.{1:0{2}d}".format(os.path.basename(input_file), i, n0) 
-            open(fragment_file, 'w').write(f)
+            with open(fragment_file, 'w') as fragment:
+                fragment.write(f)
             zf.write(fragment_file)
             os.remove(fragment_file)
             i = i + 1
@@ -211,7 +216,8 @@ class DNA(object):
         Findex = []
         for f in os.listdir(temp_dir):
             fragment_file = temp_dir + os.sep + f
-            Findex.append(open(fragment_file, 'r').read())
+            with open(fragment_file, 'r') as fragment:
+                Findex.append(fragment.read())
             os.remove(fragment_file)
 
         os.rmdir(temp_dir)
@@ -236,9 +242,9 @@ class DNA(object):
                 Fi = self.__reverse_complement(Fi)
 
             # Remove prepended A/T and appended C/G
-            Fi = Fi[1:91] # Prior lenght of Fi is 92
+            Fi = Fi[1:91] # Prior length of Fi is 92
             
-            # Extract ix (last 15) n DNA format
+            # Extract ix (last 15) in DNA format
             ix = Fi[-15:]
             Fi = Fi[:-15]
 
@@ -257,10 +263,10 @@ class DNA(object):
 
             # Checksum error
             P = int(IX[-1])
-            Pexpected = (int(ID[1-1]) + int(i3[1-1]) + int(i3[3-1]) + 
-                         int(i3[5-1]) + int(i3[7-1]) + int(i3[9-1]) + int(i3[11-1])) % 3
+            Pexpected = (int(ID[0]) + int(i3[0]) + int(i3[2]) + 
+                         int(i3[4]) + int(i3[6]) + int(i3[8]) + int(i3[10])) % 3
             if P != Pexpected:
-                print "Corrupted segment:\nID = %s\ni = %d" %(ID, i)
+                print("Corrupted segment:\nID = {}\ni = {}".format(ID, i))
             else:
                 # Save Fi
                 if i % 2 == 1:
@@ -329,7 +335,7 @@ class DNA(object):
         s = ''
         while n != 0:
             s =  str((n % 3)) + s
-            n = n/3
+            n = n//3
         return s
 
     def __base3_to_base10(self,n):
@@ -342,7 +348,7 @@ class DNA(object):
         b = 1
         while n != 0:
             res = res + (n % 10) * b
-            n = n/10
+            n = n//10
             b = 3 * b
         return res
         # return int(n , 3) <= Hahaha
@@ -374,12 +380,12 @@ def main():
         dna.encode_split(args.file)
     elif args.d:
         if args.file[-4:] != '.dna':
-            print "I only decode files terminated in .dna!"
+            print("I only decode files terminated in .dna!")
             sys.exit(1)
         dna.decode(args.file)
     elif args.j:
         if args.file[-13:] != '.splitted.zip':
-            print "I only decode and join files terminated in .splitted.zip!"
+            print("I only decode and join files terminated in .splitted.zip!")
             sys.exit(1)
         dna.decode_join(args.file)
     else:
