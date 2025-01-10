@@ -153,8 +153,8 @@ class DNA(object):
         for i in range(0, len(F)):
             i3 = self.__base10_to_base3(i)
             i3 = '0' * (12 - len(i3)) + i3
-            P = (int(ID[0]) + int(i3[0]) + int(i3[2]) +
-                 int(i3[4]) + int(i3[6]) + int(i3[8]) + int(i3[10])) % 3
+            P = (int(ID[1-1]) + int(i3[1-1]) + int(i3[3-1]) +
+                 int(i3[5-1]) + int(i3[7-1]) + int(i3[9-1]) + int(i3[11-1])) % 3
             IX = ID + i3 + str(P)
 
             ix = ''
@@ -263,8 +263,8 @@ class DNA(object):
 
             # Checksum error
             P = int(IX[-1])
-            Pexpected = (int(ID[0]) + int(i3[0]) + int(i3[2]) + 
-                         int(i3[4]) + int(i3[6]) + int(i3[8]) + int(i3[10])) % 3
+            Pexpected = (int(ID[1-1]) + int(i3[1-1]) + int(i3[3-1]) + 
+                         int(i3[5-1]) + int(i3[7-1]) + int(i3[9-1]) + int(i3[11-1])) % 3
             if P != Pexpected:
                 print("Corrupted segment:\nID = {}\ni = {}".format(ID, i))
             else:
@@ -352,7 +352,6 @@ class DNA(object):
             b = 3 * b
         return res
         
-
     def __reverse_complement(self,s):
         reverse = ''
 
