@@ -351,7 +351,7 @@ class DNA(object):
             n = n//10
             b = 3 * b
         return res
-        # return int(n , 3) <= Hahaha
+        
 
     def __reverse_complement(self,s):
         reverse = ''
