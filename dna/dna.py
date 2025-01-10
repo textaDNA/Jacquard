@@ -121,12 +121,12 @@ class DNA(object):
     def __S5_to_Fi(self, s5):
         n = len(s5)
         F = []
-        for i in range(0, n/25 - 3):
+        for i in range(0, n/25 - 2):
             # Reverse if odd
             if i % 2 == 1:
-                F.append(self.__reverse_complement(s5[25*i:25*i+100]))
+                F.append(self.__reverse_complement(s5[25*i:25*i+75]))
             else:
-                F.append(s5[25*i:25*i+100])
+                F.append(s5[25*i:25*i+75])
         return F
 
     def __Fi_to_Findex(self, F, input_file):
@@ -236,7 +236,7 @@ class DNA(object):
                 Fi = self.__reverse_complement(Fi)
 
             # Remove prepended A/T and appended C/G
-            Fi = Fi[1:116] # Prior lenght of Fi is 117
+            Fi = Fi[1:91] # Prior lenght of Fi is 92
             
             # Extract ix (last 15) n DNA format
             ix = Fi[-15:]
@@ -274,7 +274,7 @@ class DNA(object):
         # In real applications we should check if the overlapping
         # parts are equal. I won't do that for now
 
-        s5 = Fi[0][0:75]
+        s5 = Fi[0][0:50]
         for f in Fi:
             s5 = s5 + f[-25:]
         return s5
