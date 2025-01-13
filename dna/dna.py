@@ -45,14 +45,14 @@ class DNA(object):
             f.write(s5)
 
     def decode(self, input_file):
-        """ Decode file in an DNA string """
-        with open(input_file, 'r') as f:
-            s5 = f.read()
+        """ Decode file in a DNA string """
+        with open(input_file, 'r') as dna_file:
+            s5 = dna_file.read()
         s4 = self.__S5_to_S4(s5)
         s0 = self.__S4_to_S0(s4)
         # Save s0 after conversion from hexadecimal to bytes
-        with open(input_file[:-4]+'.decoded', 'wb') as f:
-            f.write(binascii.unhexlify(s0))
+        with open(input_file[:-4] + '.decoded', 'wb') as decoded_file:
+            decoded_file.write(binascii.unhexlify(s0))
 
     def decode_join(self, input_file):
         """ Decode and join DNA zip file into DNA string """
