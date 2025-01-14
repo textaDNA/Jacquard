@@ -29,7 +29,7 @@ optional arguments:
   
   -s          encode file and save it as .splitted.zip
   
-  -d          decode .dna file and save as .decoded
+  -d          decode .dna file and save it as .decoded
   
   -j          decode .splitted.zip file and save it as .decoded
 ```
