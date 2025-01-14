@@ -29,7 +29,7 @@ class DNA(object):
         """ Populates the Huffman code dictionary """
 
         # Read the dictionary from data/huff3.dict
-        # I made this file from the View_huff3.cd.new.correct
+        # Made this file from the View_huff3.cd.new.correct
         huff_dict = open(os.path.join(os.path.dirname(__file__), "data/huff3.dict"), "r")
         csv_reader = csv.reader(huff_dict, delimiter=',')
         for row in csv_reader:
