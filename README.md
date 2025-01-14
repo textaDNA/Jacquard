@@ -6,10 +6,13 @@ In our github, we provide you the Python script considering this modification to
 # Instructions
 The first step is to install file2dna using pip:
 
+```python
 $ sudo pip install file2dna
+```
 
 Next, you need to replace the dna.py generated in the folder with our current modified and updated dna.py. Next you can use the following arguments, based on what do you want to achieve:
 
+```python
 $ dna -h
 
 usage: dna [-h] [-e | -s | -d | -j] file
@@ -29,6 +32,6 @@ optional arguments:
   -d          decode .dna file and save as .decoded
   
   -j          decode .splitted.zip file and save it as .decoded
-
+```
 In our textaDNA project, we have used this code first to encode and retrieve a short quote and the logo of our research center, in silico, and next to scale up to try in vitro experiments with real data and real DNA sequences. You can see the used files as examples in this repository. 
   
