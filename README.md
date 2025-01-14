@@ -19,7 +19,7 @@ usage: dna [-h] [-e | -s | -d | -j] file
 
 positional arguments:
 
-  file        It is the file to be encoded/decoded.
+  file        "It is the file to be encoded/decoded."
 
 optional arguments:
 
