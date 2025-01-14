@@ -19,19 +19,19 @@ usage: dna [-h] [-e | -s | -d | -j] file
 
 positional arguments:
 
-  file        File to be encoded/decoded.
+  file        It is the file to be encoded/decoded.
 
 optional arguments:
 
   -h, --help  show this help message and exit
   
-  -e          encode file and save it as .dna
+  -e          encodes file, saves it ".dna"
   
-  -s          encode file and save it as .splitted.zip
+  -s          encodes file, saves it ".splitted.zip"
   
-  -d          decode .dna file and save it as .decoded
+  -d          decodes ".dna" file, saves it ".decoded"
   
-  -j          decode .splitted.zip file and save it as .decoded
+  -j          decodes ".splitted.zip" file, saves it ".decoded"
 ```
 In our textaDNA project, we have used this code first to encode and retrieve a short quote and the logo of our research center, in silico, and next to scale up to try in vitro experiments with real data and real DNA sequences. You can see the used files as examples in this repository. 
   
