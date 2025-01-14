@@ -13,7 +13,7 @@ $ sudo pip install file2dna
 Next, you need to replace the dna.py generated in the folder with our current modified and updated dna.py. Next you can use the following arguments, based on what do you want to achieve:
 
 ```python
-$ dna -h
+$ dna -... file
 
 usage: dna [-h] [-e | -s | -d | -j] file
 
