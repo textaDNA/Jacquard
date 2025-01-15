@@ -33,5 +33,5 @@ optional arguments:
   
   -j          decodes ".splitted.zip" file, saves it ".decoded"
 ```
-In our textaDNA project, we have used this code first to encode and retrieve a short quote and the logo of our research center, in silico, and next to scale up to try in vitro experiments with real data and real DNA sequences. You can see the used files as examples in this repository. 
+In our textaDNA project, we have used this code first to encode and retrieve a short quote and the logo of our research center, <i>in silico</i>, and next to scale up to try <i>in vitro</i> experiments with real data and real DNA sequences. You can see the used files as examples in this repository. 
   
