@@ -10,7 +10,7 @@ The first step is to install file2dna using pip:
 $ sudo pip install file2dna
 ```
 
-Next, you need to replace the dna.py saved in the folder created with our current modified and updated dna.py. You can then use the following arguments directly on the terminal, based on what do you want to achieve:
+Next, you need to replace the default dna.py file saved in the originated folder with our current modified and updated dna.py script. You can then use the following arguments directly on the terminal, based on what do you want to achieve:
 
 ```python
 $ dna -... file
