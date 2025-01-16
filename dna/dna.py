@@ -28,8 +28,7 @@ class DNA(object):
     def __init__(self):
         """ Populates the Huffman code dictionary """
 
-        # Read the dictionary from data/huff3.dict
-        # Made this file from the View_huff3.cd.new.correct
+        # Read the dictionary from data/huff3.dict 
         huff_dict = open(os.path.join(os.path.dirname(__file__), "data/huff3.dict"), "r")
         csv_reader = csv.reader(huff_dict, delimiter=',')
         for row in csv_reader:
@@ -118,13 +117,14 @@ class DNA(object):
 
         return s5
 
-    def __S5_to_Fi(self, s5):
+    def __S5_to_Fi(self, s5): 
+        #Modified to reduce the size of the fragments but kept as a multiple of 25 
         n = len(s5)
         F = []
         for i in range(0, n//25 - 2):
             # Reverse if odd
             if i % 2 == 1:
-                F.append(self.__reverse_complement(s5[25*i:25*i+75]))
+                F.append(self.__reverse_complement(s5[25*i:25*i+75])) 
             else:
                 F.append(s5[25*i:25*i+75])
         return F
