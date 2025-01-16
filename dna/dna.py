@@ -1,3 +1,4 @@
+#Allanino code modified by TextaDNA for shorter DNA fragments
 #!/usr/bin/python3
 
 import binascii
@@ -129,6 +130,7 @@ class DNA(object):
                 F.append(s5[25*i:25*i+75])
         return F
 
+    
     def __Fi_to_Findex(self, F, input_file):
         
         # Indexed segments
@@ -271,9 +273,6 @@ class DNA(object):
 
     def __Fi_to_S5(self, Fi):
 
-        # In real applications we should check if the overlapping
-        # parts are equal. I won't do that for now
-
         s5 = Fi[0][0:50]
         for f in Fi:
             s5 = s5 + f[-25:]
@@ -307,7 +306,7 @@ class DNA(object):
         # s1 is the first n trits
         s1 = s4[:n]
 
-        # Time to convert s1 from trits to bytes in s0
+        # Convert s1 from trits to bytes in s0
         inverted_code = dict([v,k] for k,v in self.code.items())
         s0 = ''
         i = 0
