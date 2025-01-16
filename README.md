@@ -1,5 +1,5 @@
 # Modified Goldman code
-Here we have a modified Goldman code (as retrieved from the official Allanino GitHub, https://github.com/allanino/DNA) to encode/decode different types of digital data into DNA, generating fragments of 92 bases instead of 117, due to our DNA oligonucleotide synthesis constraints. 
+Here we have a modified Goldman code (as retrieved from the official Allanino GitHub, https://github.com/allanino/DNA, under MIT license) to encode/decode different types of digital data into DNA, generating fragments of 92 bases instead of 117, due to our DNA oligonucleotide synthesis constraints. 
 In our github, we provide you the Python script considering this modification. The program runs on Python3. 
 For more information on how the code itself operates, you can read the original Goldman et al., article (https://www.nature.com/articles/nature11875). 
 
@@ -30,6 +30,12 @@ optional arguments:
   -s          encodes file, saves it ".splitted.zip"
   
   -d          decodes ".dna" file, saves it ".decoded"
+
+You have in this repository some examples you can try, here are commands you can use to test the code:
+
+```python
+$ dna -d (directory)/quote.txt
+```
   
   -j          decodes ".splitted.zip" file, saves it ".decoded"
 ```
