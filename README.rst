@@ -56,13 +56,13 @@ the paper. Suppose you have cloned this repo with its examples folder:
 
 .. code-block:: console
 
-    $ dna -d examples/DNA_versions/wssnt10.txt.dna
+    $ dna -d examples/DNA_versions/quote.txt
 
 To see the decoded file:
 
 .. code-block:: console
 
-    $ cat examples/DNA_versions/wssnt10.txt.decoded
+    $ cat examples/DNA_versions/quote.txt.decoded
 
 Additional information about this work
 ----------
