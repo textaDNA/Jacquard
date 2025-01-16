@@ -43,7 +43,7 @@ The resulting DNA string will be saved in the same directory. You can then decod
 ```python
 $ dna -d (directory)/quote.txt.dna
 ```
-Keep in mind to provide the correct file extension according to the command you want use. 
+Keep in mind to provide the correct file extension according to the command you want to use. 
 
 
   
