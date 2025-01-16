@@ -33,7 +33,7 @@ optional arguments:
   
   -j          decodes ".splitted.zip" file, saves it ".decoded"
 ```
-You have in this repository some examples you can download to test the code, with the following command:
+In our textaDNA project, we have used this code first to encode and retrieve a short quote and the logo of our research center, <i>in silico</i>, and next to scale up to try <i>in vitro</i> experiments with real data and real DNA sequences. You can see the used files as examples in this repository and download them to test the code. For example to encode into the full DNA string: 
 
 ```python
 $ dna -e (directory)/quote.txt
@@ -45,5 +45,5 @@ $ dna -d (directory)/quote.txt.dna
 ```
 Keep in mind to provide the correct file extension according to the command you want use. 
 
-In our textaDNA project, we have used this code first to encode and retrieve a short quote and the logo of our research center, <i>in silico</i>, and next to scale up to try <i>in vitro</i> experiments with real data and real DNA sequences. You can see the used files as examples in this repository. 
+
   
