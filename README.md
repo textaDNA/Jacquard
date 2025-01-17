@@ -15,7 +15,7 @@ Next, you need to replace the default dna.py file saved in the originated folder
 ```python
 $ dna -... file
 
-Positional arguments:
+positional arguments:
 
   "..." options:
   
@@ -29,7 +29,7 @@ Positional arguments:
     
     -j          decodes ".splitted.zip" file, saves it ".decoded"
   
-  file        The file we want to encode/decode. 
+  file        the file we want to encode/decode. 
 
 ```
 In our textaDNA project, we have used this code first to encode and retrieve a short quote and the logo of our research center, <i>in silico</i>, and next to scale up to try <i>in vitro</i> experiments with real data and real DNA sequences. You can see the used files as examples in this repository and download them to test the code. For example to encode into the full DNA string: 
