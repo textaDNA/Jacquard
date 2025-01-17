@@ -6,7 +6,7 @@ def read(fname):
         return f.read()
 
 setup(
-    name='file2dna',
+    name='txotxdna',
     version='0.4',
     author='textadna',
     author_email='textadna.eu',
