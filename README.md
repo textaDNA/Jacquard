@@ -7,7 +7,7 @@ For more information on how the code itself operates, you can read the original 
 The first step is to install file2dna using pip:
 
 ```python
-$ sudo pip install file2dna
+$ sudo pip install txotxdna
 ```
 
 Next, you need to replace the default dna.py file saved in the originated folder with our current modified and updated dna.py script. You can then use the following arguments directly on the terminal, based on what do you want to achieve:
