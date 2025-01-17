@@ -10,7 +10,7 @@ The first step is to install txotxdna using pip:
 pip install https://github.com/textaDNA/Jacquard.git
 ```
 
-Next, you need to replace the default dna.py file saved in the originated folder with our current modified and updated dna.py script. You can then use the following arguments directly on the terminal, based on what do you want to achieve:
+Once installed, you can then use the following arguments directly on the terminal, based on what do you want to achieve:
 
 ```powershell
 dna -... file
