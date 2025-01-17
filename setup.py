@@ -7,7 +7,7 @@ def read(fname):
 
 setup(
     name='texta2dna',
-    version='0.1',
+    version='none',
     author='textadna',
     author_email='textadna.eu',
     description='A script to encode/decode arbitrary computer files into DNA sequences.',
