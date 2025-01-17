@@ -6,6 +6,7 @@ def read(fname):
 
 setup(
     name='txotxdna',
+    version='none',
     author='textadna',
     author_email='textadna.eu',
     description='Encode/decode digital files into DNA sequences.',
