@@ -15,7 +15,7 @@ Once installed, you can then use the following arguments directly on the termina
 ```powershell
 dna -... file
 
-positional arguments:
+#positional arguments:
 
   "..." options:
   
