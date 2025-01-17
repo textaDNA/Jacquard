@@ -7,7 +7,7 @@ For more information on how the code itself operates, you can read the original 
 The first step is to install txotxdna using pip:
 
 ```powershell
-pip install https://github.com/textaDNA/Jacquard.git
+pip install git+https://github.com/textaDNA/Jacquard.git
 ```
 
 Once installed, you can then use the following arguments directly on the terminal, based on what do you want to achieve:
