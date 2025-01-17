@@ -7,16 +7,16 @@ def read(fname):
 
 setup(
     name='texta2dna',
-    version='0.4',
+    version='0.1',
     author='textadna',
     author_email='textadna.eu',
     description='A script to encode/decode arbitrary computer files into DNA sequences.',
-    url='https://github.com/allanino/DNA',
+    url='https://github.com/textaDNA/Jacquard',
     packages=['dna'],
     include_package_data=True,
     license='MIT',
     keywords='dna encoding decoding file',
-    long_description=read('README.rst'),
+    long_description=read('README.md'),
     entry_points={
         'console_scripts': ['dna=dna.dna:main'],
     },
