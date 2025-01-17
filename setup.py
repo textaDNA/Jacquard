@@ -6,10 +6,9 @@ def read(fname):
 
 setup(
     name='txotxdna',
-    version='0.4',
     author='textadna',
     author_email='textadna.eu',
-    description='A script to encode/decode arbitrary computer files into DNA sequences.',
+    description='Encode/decode digital files into DNA sequences.',
     url='https://github.com/textaDNA/Jacquard',
     packages=['dna'],
     include_package_data=True,
