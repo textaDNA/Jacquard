@@ -7,13 +7,13 @@ For more information on how the code itself operates, you can read the original 
 The first step is to install file2dna using pip:
 
 ```powershell
-$ pip install https://github.com/textaDNA/Jacquard.git
+pip install https://github.com/textaDNA/Jacquard.git
 ```
 
 Next, you need to replace the default dna.py file saved in the originated folder with our current modified and updated dna.py script. You can then use the following arguments directly on the terminal, based on what do you want to achieve:
 
-```python
-$ dna -... file
+```powershell
+dna -... file
 
 positional arguments:
 
@@ -34,13 +34,13 @@ positional arguments:
 ```
 In our textaDNA project, we have used this code first to encode and retrieve a short quote and the logo of our research center, <i>in silico</i>, and next to scale up to try <i>in vitro</i> experiments with real data and real DNA sequences. You can see the used files as examples in this repository and download them to test the code. For example to encode into the full DNA string: 
 
-```python
-$ dna -e (directory)/quote.txt
+```powershell
+dna -e (directory)/quote.txt
 ```
 The resulting DNA string will be saved in the same directory. You can then decode:
 
-```python
-$ dna -d (directory)/quote.txt.dna
+```powershell
+dna -d (directory)/quote.txt.dna
 ```
 Keep in mind to provide the correct file extension according to the command you want to use. 
 
