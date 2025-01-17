@@ -4,7 +4,7 @@ In our github, we provide you the Python script considering this modification. T
 For more information on how the code itself operates, you can read the original Goldman et al., article (https://www.nature.com/articles/nature11875). 
 
 # Instructions
-The first step is to install file2dna using pip:
+The first step is to install txotxdna using pip:
 
 ```powershell
 pip install https://github.com/textaDNA/Jacquard.git
