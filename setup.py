@@ -5,9 +5,9 @@ def read(fname):
     return open(os.path.join(os.path.dirname(__file__), fname)).read()
 
 setup(
-    name='txotxdna',
+    name='textaDNA',
     version='1.0',
-    author='textadna',
+    author='TextaDNA Consortium',
     author_email='textadna.eu',
     description='Encode/decode digital files into DNA sequences.',
     url='https://github.com/textaDNA/Jacquard',
