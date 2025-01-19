@@ -1,6 +1,6 @@
 # Jacquard: modified Goldman algorithm for DNA data storage
 
-Jacquard is a Python tool for encoding files into DNA sequences and decoding them back. It is a modified Goldman algorithm [1](https://www.nature.com/articles/nature11875) and adapted from [2] (https://github.com/allanino/DNA).
+Jacquard is a Python tool for encoding files into DNA sequences and decoding them back. It is a modified Goldman algorithm [[1]](https://www.nature.com/articles/nature11875) and adapted from the [DNA script] (https://github.com/allanino/DNA).
 
 ## Table of Contents
 
@@ -13,7 +13,7 @@ Jacquard is a Python tool for encoding files into DNA sequences and decoding the
 
 ## Introduction
 
-This repository provides a modified version of the Goldman code to encode and decode various types of digital data into DNA sequences. The program runs on Python 3.For more information on the original Goldman code, please refer to the [Goldman et al. article](https://www.nature.com/articles/nature11875).
+This repository provides a modified version of the Goldman code to encode and decode various types of digital data into DNA sequences. The program runs on Python 3.For more information on the original Goldman code, please refer to [[1]](https://www.nature.com/articles/nature11875).
 
 ## Installation
 
@@ -61,9 +61,9 @@ In the textaDNA project, we have used this code to encode a short quote and the 
 
 ## References
 
-- [1](https://www.nature.com/articles/nature11875)
-- [2](https://github.com/allanino/DNA)
-- [3](https://textadna.eu)
+- [1. Goldman algorithm ](https://www.nature.com/articles/nature11875)
+- [2. DNA script](https://github.com/allanino/DNA)
+- [3. TextaDNA project](https://textadna.eu)
 
 ## License
 
