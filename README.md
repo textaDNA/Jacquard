@@ -27,6 +27,7 @@ Alternatively, you can install Jacquard using `setup.py` with the following comm
 
 ```sh
 python setup.py install
+```
 
 ## Usage
 
