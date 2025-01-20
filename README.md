@@ -63,7 +63,7 @@ Ensure you provide the correct file extension according to the command you want 
 
 ## Examples
 
-In the textaDNA project, we have used this code to encode a short quote and the logo of the research center CiC Naogune. The resulting sequenced files are then used to decode the files back. 
+In the textaDNA project, we have used this code to encode a short quote and the logo of the research center CiC Nanogune. The resulting sequenced files are then used to decode the files back. 
 
 ## References
 
