@@ -23,6 +23,11 @@ To install Jacquard, use the following command:
 pip install git+https://github.com/textaDNA/Jacquard.git
 ```
 
+Alternatively, you can install Jacquard using `setup.py` with the following command:
+
+```sh
+python setup.py install
+
 ## Usage
 
 Once installed, you can use the following commands in the terminal based on what you want to achieve:
