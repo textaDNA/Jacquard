@@ -13,7 +13,7 @@ Jacquard is a Python tool for encoding files into DNA sequences and decoding the
 
 ## Introduction
 
-This repository provides a modified version of the Goldman code to encode and decode various types of digital data into DNA sequences. The program runs on Python 3.For more information on the original Goldman code, please refer to [[1]](https://www.nature.com/articles/nature11875).
+This repository provides a modified version of the Goldman code to encode and decode various types of digital data into DNA sequences. The program runs on Python 3. For more information on the original Goldman code, please refer to [[1]](https://www.nature.com/articles/nature11875).
 
 ## Installation
 
