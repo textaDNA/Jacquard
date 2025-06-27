@@ -64,6 +64,7 @@ Ensure you provide the correct file extension according to the command you want 
 ## Examples
 
 In the textaDNA project, we have used this code to encode a short quote and the logo of the research center CiC Nanogune. The resulting sequenced files are then used to decode the files back. 
+Illumina seuencing results of the DNA oligo pool obtained from the encoded quote can be found in the ENA repository, and here in Examples you can find the filtered representatives clusters and the zip file used to decode the message back. 
 
 ## References
 
